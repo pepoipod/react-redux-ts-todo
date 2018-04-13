@@ -132,7 +132,7 @@ const App: React.SFC = () => (
 export default App;
 ```
 
-### Container component
+## Container component
 やり過ぎ感はあるが、 `mapStateToProps` の戻り値として、 `StateToProp` interface、 `mapDispatchToProps` として、 `DispatchToProps` interface を定義.
 
 ```js
