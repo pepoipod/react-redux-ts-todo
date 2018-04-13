@@ -1,5 +1,5 @@
 # Redux Tutorial<TODO> by TypeScript
-ReduxのTutorialをTypeScriptでやってみました. (n番煎じ)　　　
+ReduxのTutorialをTypeScriptでやってみました. (n番煎じ)　  
 とりあえずの自分なりのベストプラクティスを書き記します.
 
 
@@ -30,7 +30,7 @@ globalを
 詳しいrulesは `tslint.json` を確認.
 
 ## Action, Action Creator
-Actionは [Flux Standard Action](https://github.com/redux-utilities/flux-standard-action) を参考にして、値は `payload` 内に格納するように実装.   
+Actionは [Flux Standard Action](https://github.com/redux-utilities/flux-standard-action) を参考にして、値は `payload` 内に格納するように実装.  
 interfaceは Redux のActionをextendsしておく.
 
 ```js
@@ -63,7 +63,7 @@ export type TodoActions = AddTodoAction | SetVisibilityFilterAction | ToggleTodo
 
 
 ## State
-Stateは `states/` 内でinterface定義. 各stateはReduxの思想に乗っ取り、readonlyに指定する.　　　　
+Stateは `states/` 内でinterface定義. 各stateはReduxの思想に乗っ取り、readonlyに指定する.  
 ObjectなStateも定義しておくことで、各所でtypeを利用できて便利.
 
 ```js
@@ -88,9 +88,9 @@ export interface State {
 素直に実装すれば良い.
 
 ## Components
-Presentational componentなので、基本的にSFCになるよう実装.    
-引数の `props` はTutorial内では `({ active, children, onClick })` のように記述されていたが、こちらを参考に、関数内でpropsを展開.   
-やってることは変わらないので、好みで決めていいと思う. 個人的に、引数に書くと変数定義部が冗長になりすぎてしまうので、関数内のほうが好み.     
+Presentational componentなので、基本的にSFCになるよう実装.  
+引数の `props` はTutorial内では `({ active, children, onClick })` のように記述されていたが、こちらを参考に、関数内でpropsを展開.  
+やってることは変わらないので、好みで決めていいと思う. 個人的に、引数に書くと変数定義部が冗長になりすぎてしまうので、関数内のほうが好み.  
 各componentのpropsはOwnPropsとしてinterfaceを定義.
 
 ```js
