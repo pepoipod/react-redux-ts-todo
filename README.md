@@ -87,7 +87,7 @@ export interface State {
 ## Reducer、Store
 素直に実装すれば良い.
 
-## Components
+## Presentational component
 Presentational componentなので、基本的にSFCになるよう実装.  
 引数の `props` はTutorial内では `({ active, children, onClick })` のように記述されていたが、こちらを参考に、関数内でpropsを展開.  
 やってることは変わらないので、好みで決めていいと思う. 個人的に、引数に書くと変数定義部が冗長になりすぎてしまうので、関数内のほうが好み.  
@@ -132,7 +132,7 @@ const App: React.SFC = () => (
 export default App;
 ```
 
-### Containers
+### Container component
 やり過ぎ感はあるが、 `mapStateToProps` の戻り値として、 `StateToProp` interface、 `mapDispatchToProps` として、 `DispatchToProps` interface を定義.
 
 ```js
